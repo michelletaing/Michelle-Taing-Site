@@ -24,18 +24,15 @@
         $('#footer').load('../components/footer.html');
       });
 
-      
       document.addEventListener('DOMContentLoaded', function() {
         var player = videojs('video1', {
           responsive: true,
-          autoplay: true,
           loop: true,
           fluid: true
         });
 
         var player = videojs('video2', {
           responsive: true,
-          autoplay: true,
           loop: true,
           fluid: true
         });
@@ -108,16 +105,16 @@
 
       <div class="row gx-lg-5 gy-lg-5 gx-4 gy-4 mb-5">
         <div class="col-md-6 order-md-1 order-0">
-          <img src="../assets/ootd/sign-up.png" class="figure-img img-fluid" alt="Sign up image">
+          <img src="../assets/ootd/closet.png" class="figure-img img-fluid" alt="Sign up image">
         </div>
         <div class="col-md-6 d-flex flex-column justify-content-center order-md-2 order-1">
-          <h2>Create your own profile</h2>
+          <h2>View your organized closet</h2>
           <p>Log in or sign up into the application to access or create your own closet. We implemented guards so that unauthenticated users don't have access to the rest of our site.</p>
         </div>
       
         <div class="col-md-6 order-md-4 order-2">
           <video id="video1" class="video-js vjs-default-skin custom-video" controls preload="auto">
-            <source src="../assets/ootd/add-item.mp4" type="video/mp4">
+            <source src="../assets/ootd/clothing.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -128,7 +125,7 @@
       
         <div class="col-md-6 order-md-6 order-4">
           <video id="video2" class="video-js vjs-default-skin custom-video" controls preload="auto">
-            <source src="../assets/ootd/edit-item-720.mp4" type="video/mp4">
+            <source src="../assets/ootd/outfits.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -140,13 +137,16 @@
 
       <hr>
 
-      <h2>Early stages</h2>
-      <h2>Challenges</h2>
-      <h2>Accomplishments</h2>
-    
-
-    
-      
+      <div class="pt-3">
+        <h3>Team Structure</h3>
+        <p>This application was created collaboratively with three other peers. We split off into two development teams: frontend and backend. Although I was formally on the frontend team, I also did backend development for select features.</p>
+        <h3>Inspiration</h3>
+        <p>We decided to create a closet application because it is a tool we would all use. The idea is simple, practical, and applicable to anyone who owns clothing. Additionally, the features we wanted to implement were complex enough to allow us to create a substantial application. Simply put, we were all looking for a project that would ease us into the full-stack development world. Creating this application involved a lot of “firsts” for everyone — this was our first time creating a full-stack application, and we were using completely new tools/technologies.</p>
+        <h3>Timeline and Workflow</h3>
+        <p>This project was split into 4 distinct sprints over the course of ~3 months. The requirements for each sprint were variable, but generally, we would implement X number of features (which we defined at the start of the sprint), and each newly implemented feature was supported by unit tests (backend) or end-to-end tests (frontend). Each sprint was documented here (https://github.com/gatorcloset/OOTD/tree/main/sprints).</p>
+        <h3>Personal Involvement</h3>
+        <p>Generally, my role was focused on integrating the frontend interface with the backend API. Oftentimes, I created basic interfaces using Angular Material components, integrated the features with our API, and tested for functionality. I would hand this off to my frontend partner who would improve the UI. I also worked closely with the backend team to define the structure and logic of the API functions. Collaborating closely with both sides of development was extremely fulfilling and definitely my favorite part about working on this project!</p>
+      </div>
       
       
       

@@ -8,7 +8,7 @@
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons-->
     <script src="https://kit.fontawesome.com/0e409249cc.js" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
@@ -16,50 +16,121 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../style.css">
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
     <!-- Load components -->
     <script>
       $(function() {
         $('#navbar').load('../components/navbar.html');
         $('#footer').load('../components/footer.html');
       });
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var player = videojs('video1', {
+          responsive: true,
+          loop: true,
+          fluid: true
+        });
+
+        var player = videojs('video2', {
+          responsive: true,
+          loop: true,
+          fluid: true
+        });
+
+        var player = videojs('video3', {
+          responsive: true,
+          loop: true,
+          fluid: true
+        });
+      });
+      
     </script>
   </head>
   <body>
     <div id="navbar"></div>
 
     <div class="container mb-5">
-      <div class="mb-5">
-        <h1 class="mt-4 bold text-uppercase">Gator Eats</h1>
-        <p class="text-muted text-uppercase">Apr 2023</p>
-        <div class="mb-4">
-          <button type="button" class="btn btn-custom btn-sm rounded-pill" style="display: inline;">
-            HTML
-          </button>
-          <button type="button" class="btn btn-custom btn-sm rounded-pill" style="display: inline;">
-            CSS
-          </button>
-          <button type="button" class="btn btn-custom btn-sm rounded-pill" style="display: inline;">
-            Bootstrap
-          </button>
-          <button type="button" class="btn btn-custom btn-sm rounded-pill" style="display: inline;">
-            JavaScript
-          </button>
-          <button type="button" class="btn btn-custom btn-sm rounded-pill" style="display: inline;">
-            PHP
-          </button>
-          <button type="button" class="btn btn-custom btn-sm rounded-pill" style="display: inline;">
-            SQL
-          </button>
+      <h1 class="mt-4 bold text-uppercase">Gator Eats</h1>
+      <p class="text-muted text-uppercase">Apr 2023</p>
+      <div class="mb-3">
+        <button type="button" class="btn btn-custom btn-sm rounded-pill" style="display: inline;">
+          HTML
+        </button>
+        <button type="button" class="btn btn-custom btn-sm rounded-pill" style="display: inline;">
+          CSS
+        </button>
+        <button type="button" class="btn btn-custom btn-sm rounded-pill" style="display: inline;">
+          Bootstrap
+        </button>
+        <button type="button" class="btn btn-custom btn-sm rounded-pill" style="display: inline;">
+          JavaScript
+        </button>
+        <button type="button" class="btn btn-custom btn-sm rounded-pill" style="display: inline;">
+          PHP
+        </button>
+        <button type="button" class="btn btn-custom btn-sm rounded-pill" style="display: inline;">
+          SQL
+        </button>
+      </div>
+
+      <div class="row gx-lg-5 gy-lg-5 gx-4 gy-4 mb-5">
+        <div class="col-md-6 order-md-1 order-0">
+          <video id="video1" class="video-js vjs-default-skin custom-video" controls preload="auto">
+            <source src="../assets/gator-eats/locations-720.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
-        <h2>Project Description</h2>
-        <h2>Involvement</h2>
-        <h2>Features</h2>
-    </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center order-md-2 order-1">
+          <h2>View all dining locations</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo nec ultrices dui sapien eget mi proin sed libero. Dignissim diam quis enim lobortis scelerisque fermentum dui.</p>
+        </div>
+      
+        <div class="col-md-6 order-md-4 order-2">
+          <video id="video2" class="video-js vjs-default-skin custom-video" controls preload="auto">
+            <source src="../assets/gator-eats/menus-720.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center order-md-3 order-3">
+          <h2>Robust menu features</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo nec ultrices dui sapien eget mi proin sed libero. Dignissim diam quis enim lobortis scelerisque fermentum dui.</p>
+        </div>
+      
+        <div class="col-md-6 order-md-6 order-4">
+          <video id="video3" class="video-js vjs-default-skin custom-video" controls preload="auto">
+            <source src="../assets/gator-eats/map-720.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center order-md-5 order-5">
+          <h2>Explore your options</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo nec ultrices dui sapien eget mi proin sed libero. Dignissim diam quis enim lobortis scelerisque fermentum dui.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="pt-3">
+        <!--
+        <h3>Inspiration</h3>
+        <p></p>
+        <h3>Timeline and Workflow</h3>
+        <p></p>
+        <h3>Personal Involvement</h3>
+        <p></p>
+        -->
+        <h3>View the code</h3>
+        <button type="button" class="btn btn-custom rounded-pill" onclick="window.open('https://github.com/michelletaing/GatorEats', '_blank');">
+          <i class="fa-brands fa-github fa-lg me-1"></i>
+          GITHUB REPO
+        </button>
+      </div>
     </div>
 
     <div id="footer"></div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
   </body>
 </html>

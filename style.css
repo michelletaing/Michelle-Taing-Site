@@ -31,6 +31,10 @@ hr {
     color: #adb5bd;
 }
 
+.figure a {
+    text-decoration: none;
+}
+
 .alt-font {
     font-family: 'Instrument Serif', serif;
     display: inline;
